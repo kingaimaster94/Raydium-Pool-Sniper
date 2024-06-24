@@ -1,28 +1,27 @@
 import { Connection, Keypair, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js"
 import bs58 from 'bs58';
 
-
-
 export const wallet = Keypair.fromSecretKey(
-    bs58.decode(
-      '' // PRIV KEY OF SNIPER
-    )
+  bs58.decode(
+    '5ajB9acmLaKU39daFrv3TYpTU8F3i647dLvvrXHt8B8jGfY2src1iEEpna6Sr1r3X2CyfdZEhDH8n7Tc88XegMVW' // PRIV KEY OF SNIPER
+  )
 );
 
 const rpc = 'https://api.mainnet-beta.solana.com'; // ENTER YOUR RPC
+// const rpc = 'https://api.devnet.solana.com'; // ENTER YOUR RPC
 
 export const tokenAddress = ''; // ENTER YOUR DESIRED TOKEN ADDRESS TO SNIPE!!!!!!!!!!
 
 const snipeAmount = 0.001; // SNIPE AMOUNT IN SOL
 
 const tipAmount = 0.015; // JITO TIP IN SOL (the more you tip the faster)
-                        // I recommend atleast 0.003
+// I recommend atleast 0.003
 
 
 
 /* DONT TOUCH ANYTHING BELOW THIS */
 
-export const connection = new Connection(rpc, 'confirmed') 
+export const connection = new Connection(rpc, 'confirmed')
 
 export const tipAcct = new PublicKey('Cw8CFyM9FkoMi7K7Crf6HNQqf4uEMzpKw6QNghXLvLkY');
 
